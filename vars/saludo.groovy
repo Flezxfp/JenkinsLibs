@@ -15,12 +15,12 @@ def call(env) {
     // }
 
     stages {
-      stage('Identificación de la Rama') {
+      stage('Saludo') {
         steps {
-        //  sh ''' cat 'C:\Users\din_c\Documents\TestCLI\CliTest\holaDiego.txt' '''
-        // def data = readFile(file:'C:\Users\din_c\Documents\TestCLI\CliTest\holaDiego.txt')
-        // println (data)
-        sh ''' echo 'prueba' '''
+          script {
+             echo 'Hola mundo....'
+             pwd
+          }
         }
       }
     }
