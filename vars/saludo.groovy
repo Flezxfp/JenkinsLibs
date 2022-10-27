@@ -18,7 +18,7 @@ def call(env) {
       stage('Identificación de la Rama') {
         steps {
           script {
-             echo 'Hola mundo....'
+             cat Holamundo.txt
           }
         }
       }
