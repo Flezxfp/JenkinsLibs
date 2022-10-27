@@ -17,7 +17,7 @@ def call(env) {
     stages {
       stage('Identificación de la Rama') {
         steps {
-         sh ''' cat holamundo.txt '''
+         sh ''' cat C:\Users\din_c\Documents\TestCLI\CliTest\holaDiego.txt '''
         }
       }
     }
