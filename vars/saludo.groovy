@@ -18,8 +18,9 @@ def call(env) {
       stage('Identificación de la Rama') {
         steps {
         //  sh ''' cat 'C:\Users\din_c\Documents\TestCLI\CliTest\holaDiego.txt' '''
-        def data = readFile(file:'C:\Users\din_c\Documents\TestCLI\CliTest\holaDiego.txt')
-        println (data)
+        // def data = readFile(file:'C:\Users\din_c\Documents\TestCLI\CliTest\holaDiego.txt')
+        // println (data)
+        sh ''' pwd '''
         }
       }
     }
