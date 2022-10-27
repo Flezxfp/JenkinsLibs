@@ -20,7 +20,7 @@ def call(env) {
         //  sh ''' cat 'C:\Users\din_c\Documents\TestCLI\CliTest\holaDiego.txt' '''
         // def data = readFile(file:'C:\Users\din_c\Documents\TestCLI\CliTest\holaDiego.txt')
         // println (data)
-        sh ''' pwd '''
+        sh ''' echo 'prueba' '''
         }
       }
     }
