@@ -11,10 +11,7 @@ def call() {
   stages {
       stage('Deigo') {
       steps {
-          node('serchWS') {
-          //sh ''' git clone "http://ezunigas:OptimusArca@10.51.158.200/gitlab-big/devops/jenkins/pipes.git" '''    
-          sh ''' cat pipes/vars/saludo.groovy '''
-          }
+           sh ''' cat pipes/vars/saludo.groovy '''
         }
 
   post {
@@ -29,7 +26,6 @@ def call() {
             cleanWs()
           }
         }
-
       }
     }
   }
