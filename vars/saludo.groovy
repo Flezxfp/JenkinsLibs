@@ -1,42 +1,35 @@
 import groovy.json.JsonSlurper
 
-def call(env) {
-  final MASTER = 'master'
-
+def call() {
   pipeline {
     agent {
       node {
-        label MASTER
+        label 'master'
       }
     }
 
-    // environment {
-    //   ANGULARN_NODE14_GITREPO = credentials('AngularN-Node14-GitRepo')
-    // }
-
-    stages {
-      stage('Saludo') {
-        steps {
-          script {
-             echo 'Hola mundo....'
-             pwd
+  stages {
+      stage('Deigo') {
+      steps {
+          node('serchWS') {
+          //sh ''' git clone "http://ezunigas:OptimusArca@10.51.158.200/gitlab-big/devops/jenkins/pipes.git" '''    
+          sh ''' cat pipes/vars/saludo.groovy '''
           }
         }
-      }
-    }
 
-    post {
-      success {
-        echo 'Sucess....'
-         
-      }
+  post {
+    success { 
+      echo 'Construccion exitosa....'
+          }
 
-      failure {
-        echo 'Failure.....'
+    failure {
+      echo 'Parece que algo no salio Bien....'
+          }
+    always {
+            cleanWs()
+          }
+        }
 
-      }
-      always {
-           echo 'Always......'
       }
     }
   }
