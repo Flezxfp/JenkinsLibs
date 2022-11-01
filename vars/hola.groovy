@@ -11,7 +11,7 @@ def call() {
   stages {
       stage('Deigo') {
       steps {
-           bat '''type  pipes/vars/hola.groovy '''
+           bat '''bat  pipes/vars/hola.groovy '''
         }
 
   post {
