@@ -9,9 +9,9 @@ def call() {
     }
 
   stages {
-      stage('Deigo') {
+      stage('Dieguini ') {
       steps {
-           bat ''' cat pipes/vars/saludo.groovy '''
+           bat """ type pipes/vars/saludo.groovy """
         }
 
   post {
