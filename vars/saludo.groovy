@@ -9,9 +9,11 @@ def call() {
     }
 
   stages {
-      stage('Deigo') {
+      stage('Dieguini ') {
       steps {
-           sh ''' cat pipes/vars/saludo.groovy '''
+
+           bat """""git clone C:\Users\din_c\Documents\TestCLI\JenkinsLibs\vars """""  
+           bat """ type pipes/vars/saludo.groovy """
         }
 
   post {
