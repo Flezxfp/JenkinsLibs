@@ -12,8 +12,9 @@ def call() {
       stage('Dieguini ') {
       steps {
 
-           bat """""git clone C:\Users\din_c\Documents\TestCLI\JenkinsLibs\vars """""  
-           bat """ type pipes/vars/saludo.groovy """
+           bat """ git clone https://github.com/Flezxfp/JenkinsLibs.git"""  
+          //  bat """ type pipes/vars/saludo.groovy """
+          bat """pwd"""
         }
 
   post {
